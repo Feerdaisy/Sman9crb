@@ -1,0 +1,206 @@
+/* Reset dan gaya dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #003366;
+  color: white;
+  padding: 40px 15px;
+  text-align: center;
+}
+
+/* Navigasi */
+nav {
+  background-color: #004080;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* opsional, biar rata tengah */
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 10px 0;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+}
+
+/* efek hover underline halus */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: yellow;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: yellow;
+  transform: scale(1.05);
+}
+
+/* warna untuk halaman aktif */
+nav a.active {
+  color: yellow;
+}
+
+/* Tentang Sekolah */
+.tentang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.gambar {
+  flex: 1;
+}
+
+.gambar img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.teks {
+  flex: 1;
+  padding: 30px;
+}
+
+.teks h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #333;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.teks p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Konten utama */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer */
+
+footer {
+  background: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  .tentang {
+    flex-direction: column;
+  }
+
+  .teks {
+    padding: 20px;
+  }
+
+  .gambar img {
+    border-bottom: 1px solid #eee;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+}
+
+/* Ekstrakurikuler List */
+.eskul-list {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: left;
+}
+
+.eskul-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #333;
+}
+
+.eskul-list ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.eskul-list li {
+  margin-bottom: 8px;
+}
+
+.eskul-list p {
+  margin-top: 20px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+
+.gambar-kontak {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
